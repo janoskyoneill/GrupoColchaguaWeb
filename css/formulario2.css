@@ -1,0 +1,616 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
+}
+
+body {
+  width: 100%;
+  max-width: 1350px;
+  height: 600px;
+  min-height: 100vh;
+  background: url('../img/cabecera.jpg') no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+  padding: auto;
+  margin-top: 5px;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1.1rem 20%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+
+.navbar{
+  position: relative;
+  top: 10px;
+  left: 50px;
+  width: 100%;
+}
+
+.hidden {
+  transform: translateX(-100%);
+  opacity: 0;
+  transition: transform 2s ease-out, opacity 2s ease-out;
+}
+
+.shown {
+  transform: translateX(0%);
+  opacity: 1;
+  transition: transform 2s ease-in, opacity 2s ease-in;
+}
+.botones-header.hidden{
+  transform: translateX(-100%);
+  opacity: 100;
+  transition: transform 2s ease-out, opacity 2s ease-out;
+  
+}  
+.botones-header.shown {
+  transform: translateX(0%);
+  opacity: 1;
+  transition: transform 2s ease-in, opacity 2s ease-in;
+}
+
+.header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  background:#4e1743;
+  backdrop-filter: blur(4px);
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+
+}
+
+.header::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(87, 56, 85, 0.4), transparent);
+  transition: .5s;
+}
+
+.header:hover::after {
+  left: 100%;
+}
+
+.logo{
+  font-size: 2rem;
+  width: 100%;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.navbar a{
+  font-size: 1.40rem;
+  margin-left: 2%;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  font-family: 'Lato', sans-serif,;
+}
+
+.navbar .rrss{
+  width: 10%;
+  display: flex;
+  margin-left: 600px;
+  justify-content: right;
+}
+
+.rrss .logos-rrss{
+  width: 100%;
+  height: auto;
+  display: flex;
+  margin-right: 100px;
+}
+.navbar img{
+  margin-top: -30px;
+  margin-bottom: 5px;
+  width: 40px;
+  text-align: center;
+  margin-left: 25px;
+}
+
+
+
+#check {
+  display: none;
+
+}
+
+
+.icons{
+  position: absolute;
+  font-size: 2.8rem;
+  right: 5%;
+  color: #fff;
+  cursor: pointer;
+  display: none;
+}
+
+.header .logo-main {
+  position: relative;
+  top: auto;
+  width: 40%;
+  margin-left: -140px;
+}
+
+.wave {
+  color: #09f;
+  animation: wave 3s ease-in-out infinite;
+  margin-bottom: -1%;
+}
+
+@media (max-width: 992px) {
+  .header {
+    padding: 1.3rem 15%;
+  }
+}
+
+@media (max-width: 768px){
+  .icons {
+    display: inline-flex;
+  }
+
+  #check:checked~.icons #menu-icon {
+    display: none;
+  }
+
+  .icons #close-icon {
+    display: none;
+
+  }
+
+  #check:checked~.icons #close-icon {
+    display: block;
+  }
+
+  .navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    background: #4e1743;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    overflow: hidden;
+    transition: .3s ease;
+  }
+  
+
+  #check:checked~.navbar {
+    height: 17.7rem;
+  }
+
+  .navbar a {
+    display: block;
+    font-size: 1.1rem;
+    margin: 1.5rem 0;
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+    transform: translateY(-50px);
+    opacity: 0;
+    transition: .3s ease;
+  }
+
+  
+  #check:checked~.navbar a {
+    transform: translateY(0);
+    opacity: 1;
+    transition-delay: calc(.15s * var(--i));
+  }
+
+  .header .logo-main {
+    margin-left: -20px;
+    
+  }
+}
+
+ 
+
+
+  
+  @keyframes wave {
+    0%, 100% {
+      clip-path: polygon(
+        0% 43%,
+        10% 48%,
+        33% 54%,
+        54% 60%,
+        70% 60%,
+        84% 59%,
+        100% 55%,
+        100% 100%,
+        0% 100%
+      );
+    }
+  
+    50% {
+      clip-path: polygon(0% 60%,
+      15% 65%,
+      34% 66%,
+      51% 62%,
+      67% 50%,
+      84% 45%,
+      100% 46%,
+      100% 100%,
+      0% 100%
+      );
+    }
+  }   
+
+  /*first section*/
+  .wave{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+
+  /*Formulario*/
+
+.contenedor-form{
+    position: absolute;
+    padding: auto;
+    margin-top: 200px;
+    height: 100%;
+    width: 100%; 
+    background: #f8f7f3;
+  }
+  
+  .contenedor-form h1{
+    text-align: center;
+    font-size: 45px;
+    color: #4e1743;
+    font-weight: bold;
+  }
+  
+  
+  .formulario{
+   
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-top: 50px;
+    margin-left: 15%;
+    margin-right: 15%;
+    padding: auto;
+    height: 80%;
+    width: 70%; 
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px 10px 100px 10px;
+  }
+  
+  .formulario img{
+    width: 100%;
+  }
+  
+  .text-form{
+    display: grid;
+    position: relative;
+    padding: auto;
+    width: 100%;
+    height: 100%;
+    margin-top: -510px;
+    margin-left: 5%;
+  }
+  
+  .formulario img{
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+  
+
+  form {
+    max-width: 400px;
+    margin: 0 auto;
+    margin-top: 00%;
+  }
+  .form-nombre{
+    position: absolute;
+    width: 40%;
+    left: 0;
+    margin-left: 0%;
+    margin-top: 0%;
+    color: #fff;
+  }
+  .form-apellido{
+    position: absolute;
+    width: 40%;
+    margin-left: 0%;
+    margin-top: 0%;
+    color: #fff;
+  }
+
+  .form-correo{
+    position: absolute;
+    width: 90%;
+    left: 0;
+    margin-left: 0%;
+    margin-top: 8%;
+    color: #fff;
+  }
+  .form-nombre-empresa{
+    position: absolute;
+    width: 40%;
+    left: 0;
+    margin-left: 0%;
+    margin-top: 16%;
+    color: #fff;
+  }
+  .form-direccion{
+    position: absolute;
+    width: 40%;
+    left: 0;
+    margin-left: 50%;
+    margin-top: 16%;
+    color: #fff;
+  }
+  .form-telefono{
+    position: absolute;
+    width: 40%;
+    left: 0;
+    margin-left: 0%;
+    margin-top: 24%;
+    color: #fff;
+  }
+  .form-rut{
+    position: absolute;
+    width: 40%;
+    left: 0;
+    margin-left: 50%;
+    margin-top: 24%;
+    color: #fff;
+  }
+  .form-ayuda{
+    position: absolute;
+    width: 90%;
+    left: 0;
+    margin-left: 0%;
+    margin-top: 32%;
+    color: #fff;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 8px;
+  }
+
+  input,
+  select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+  }
+
+  input[type="submit"] {
+    width: 20%;
+    margin-top: 46%;
+    margin-left: 20%;
+    border-radius: 25px;
+    position: absolute;
+    background-color:#4e1743;
+    color: white;
+    cursor: pointer;
+  }
+
+  .footer{
+    width: 100%;
+    height: 40%;
+    position: relative;
+    background-color: #4e1743;
+  }
+  .logo-footer{
+    position: absolute;
+    width: 20%;
+    height: 100%;
+    background-color:#4e1743;
+  }
+  .logo-footer img{
+    width: 70%;
+    margin-left: 20%;
+    margin-top: 5%;
+  }
+  .contenedor-informacion{
+    position: absolute;
+    width: 20%;
+    height: 100%;
+    background-color: #4e1743;
+    margin-left: 20%;
+  }
+  .contenedor-informacion h1{
+    text-align: center;
+    color: #fff;
+    font-size: 1.4em;
+    margin-top: 10%;
+  }
+  .contenedor-informacion p{
+    text-align: center;
+    margin: 5%;
+    color: #fff;
+    font-size: 0.8em;
+  }
+  .contenedor-atencion{
+    width: 20%;
+    height: 100%;
+    position: absolute;
+    background-color: #4e1743;
+    margin-left: 40%;
+  }
+  
+  .contenedor-atencion h1{
+    text-align: center;
+    color: #fff;
+    font-size: 1.4em;
+    margin-top: 10%;
+  }
+  .contenedor-atencion p{
+    text-align: center;
+    margin: 5%;
+    color: #fff;
+    font-size: 0.8em;
+  }
+  
+  .contenedor-contacto{
+    width: 20%;
+    height: 100%;
+    position: absolute;
+    background-color: #4e1743;
+    margin-left: 60%;
+  }
+  
+  .contenedor-contacto h1{
+    text-align: center;
+    color: #fff;
+    font-size: 1.4em;
+    margin-top: 10%;
+  }
+  .contenedor-contacto p{
+    text-align: center;
+    right: 0;
+    color: #fff;
+    font-size: 0.8em;
+    margin-top: 3%;
+  }
+  
+  .contenedor-rrss{
+    width: 20%;
+    height: 100%;
+    position: absolute;
+    background-color: #4e1743;
+    margin-left: 80%;
+    display: flex;
+    
+    text-align: center;
+  }
+  .contenedor-rrss img{
+    width: 15%;
+    height: 15%;
+    margin-right: 10%;
+    margin-top: 8%;
+  }
+  
+  @media (max-width: 992px) {
+    .nuestra-promesa{
+      width: 100%;
+      position: relative;
+    }
+    .nuestra-promesa h2{
+      text-align: center;
+    }
+    .nuestra-promesa p{
+      text-align: justify;
+    }
+    .compromiso-mujeres{
+      width: 100%;
+      height: 100%;
+      position: relative;
+     
+    }
+    .contenedor-compromiso{
+      width: 100%;
+      position: absolute;
+    }
+    .compromiso-mujeres h1{
+      margin-top: -35%;
+      font-size: 3em;
+    }
+    .compromiso-mujeres h2{ 
+      margin-top: -2%;
+      font-size: 0.9em;
+    }
+    .compromiso-mujeres img{
+      width: 100%;
+      height: 100%;
+      margin-top: 150%;
+    }
+    .footer{
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+    .logo-footer{
+      position: absolute;
+      width: 30%;
+      height: 100%;
+    }
+    .logo-footer img{
+      width: 80%;
+    }
+    .contenedor-informacion{
+      margin-top: 25%;
+      position: absolute;
+      float: left;
+      width: 40%;
+      height: 25%;
+      margin-left: 0;
+      
+    }
+    .contenedor-informacion h1{
+      color: white;
+    }
+    .contenedor-atencion{
+      margin-top: 25%;
+      position: absolute;
+      float: left;
+      width: 40%;
+      height: 25%;
+      margin-left: 55%;
+      
+    }
+    .contenedor-atencion h1{
+      color: white;
+    }
+    .contenedor-contacto{
+      margin-top: 76%;
+      position: absolute;
+      float: left;
+      width: 40%;
+      height: 20%;
+      margin-left: 0;
+      
+    }
+    .contenedor-contacto h1{
+      color: white;
+    }
+  
+    .contenedor-contacto p{
+      margin-top: 5%;
+    }
+  
+    .contenedor-rrss{
+      margin-top: 5%;
+      position: absolute;
+      float: left;
+      width: 40%;
+      height: 10%;
+      margin-left: 58%;
+      display: flex;
+      justify-content: center;
+    }
+    .contenedor-rrss img{
+      width: 50%;
+      height: 50%;
+    }
+  
+  }

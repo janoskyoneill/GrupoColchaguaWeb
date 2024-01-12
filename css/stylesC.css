@@ -1,0 +1,1407 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
+}
+
+body {
+  width: 100%;
+  height: 600px;
+  min-height: 100vh;
+  background: url('../img/locaciones.png') no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  position: relative;
+  padding: auto;
+  
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 0.8rem 20%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+
+.navbar{
+  position: relative;
+  margin-top:1%;
+  margin-left: 5%;
+  width: 100%;
+}
+
+.hidden {
+  transform: translateX(-100%);
+  opacity: 0;
+  transition: transform 2s ease-out, opacity 2s ease-out;
+}
+
+.shown {
+  transform: translateX(0%);
+  opacity: 1;
+  transition: transform 2s ease-in, opacity 2s ease-in;
+}
+.botones-header.hidden{
+  transform: translateX(-100%);
+  opacity: 100;
+  transition: transform 2s ease-out, opacity 2s ease-out;
+  
+}  
+.botones-header.shown {
+  transform: translateX(0%);
+  opacity: 1;
+  transition: transform 2s ease-in, opacity 2s ease-in;
+}
+
+.header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  background:#4e1743;
+  backdrop-filter: blur(4px);
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+
+}
+
+.header::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(167, 31, 157, 0.4), transparent);
+  transition: .5s;
+}
+
+.header:hover::after {
+  left: 100%;
+}
+
+.logo{
+  font-size: 2rem;
+  width: 100%;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.navbar a{
+  font-size: 1.40rem;
+  margin-left: 2%;
+  margin-bottom: -25%;
+  color: #e6e6e6;
+  text-decoration: none;
+  font-weight: 500;
+  font-family: 'Lato', sans-serif,;
+}
+
+.navbar a:hover{
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.navbar .rrss{
+  width: 10%;
+  display: flex;
+  margin-left: 600px;
+  justify-content: right;
+}
+
+.rrss .logos-rrss{
+  width: 100%;
+  height: auto;
+  display: flex;
+  margin-right: 135px;
+}
+.rrss img{
+  margin-top: -30px;
+  margin-bottom: 15px;
+  width: 40px;
+  text-align: center;
+  margin-left: 25px;
+}
+
+
+
+#check {
+  display: none;
+
+}
+
+
+.icons{
+  position: absolute;
+  font-size: 2.8rem;
+  right: 5%;
+  color: #fff;
+  cursor: pointer;
+  display: none;
+}
+
+.header .logo-main {
+  position: relative;
+  top: auto;
+  width: 40%;
+  margin-left: -135px;
+}
+
+.wave {
+  color: #09f;
+  animation: wave 3s ease-in-out infinite;
+  margin-bottom: -1%;
+}
+
+@media (max-width: 992px) {
+  .header {
+    padding: 1.3rem 15%;
+  }
+}
+
+@media (max-width: 768px){
+  .icons {
+    display: inline-flex;
+  }
+
+  #check:checked~.icons #menu-icon {
+    display: none;
+  }
+
+  .icons #close-icon {
+    display: none;
+
+  }
+
+  #check:checked~.icons #close-icon {
+    display: block;
+  }
+
+  .navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    margin-left: 0;
+    width: 100%;
+    height: 0%;
+    background: #4e1743;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    overflow: hidden;
+    transition: .3s ease;
+  }
+  
+
+  #check:checked~.navbar {
+    height: 17.7rem;
+  }
+
+  .navbar a {
+    display: block;
+    font-size: 1.1rem;
+    margin: 1.5rem 0;
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+    transform: translateY(-50px);
+    opacity: 0;
+    transition: .3s ease;
+  }
+
+  
+  #check:checked~.navbar a {
+    transform: translateY(0);
+    opacity: 1;
+    transition-delay: calc(.15s * var(--i));
+  }
+
+  .header .logo-main {
+    margin-left: -20px;
+    width: 70%;
+  }
+  
+}
+
+ 
+
+
+  
+  @keyframes wave {
+    0%, 100% {
+      clip-path: polygon(
+        0% 43%,
+        10% 48%,
+        33% 54%,
+        54% 60%,
+        70% 60%,
+        84% 59%,
+        100% 55%,
+        100% 100%,
+        0% 100%
+      );
+    }
+  
+    50% {
+      clip-path: polygon(0% 60%,
+      15% 65%,
+      34% 66%,
+      51% 62%,
+      67% 50%,
+      84% 45%,
+      100% 46%,
+      100% 100%,
+      0% 100%
+      );
+    }
+  }   
+
+  .wave{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+
+  .texto-servicios{
+    padding: 150px;
+    height: 100px;
+    width: 100%;
+    height: auto;   
+
+  }
+
+  .texto-encabezado{
+    padding: 100px;
+    height: 100px;
+    width: 100%;
+    height: auto;   
+  }
+
+  .texto-encabezado h1{
+    margin-top: 20%;
+    font-size: 45px;
+    text-align: left;
+    color: rgb(255, 255, 255);
+    margin-left: -100px;
+    margin-right: 1%;
+    margin-top: 40px;
+    font-family: 'Lato', sans-serif;
+   
+  }
+  .texto-servicios p{
+    margin-bottom: 20px;
+    margin-right: 40%;
+    margin-left: -100px;
+    font-size: 15px;
+    font-family: 'Lato', sans-serif;
+    color: #fff;
+  }
+
+  .botones-encabezado{
+    margin-top: -260px;
+    text-align: right;
+    margin-right: -100px;
+  }
+  .button{
+    padding: 4px 10px 4px 10px;
+    font-size: 30px;
+    background-color: rgb(69, 23, 75);
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 10px 0 0 10px;
+    text-align: right;
+    margin-right: -50px;
+    font-weight: bold;
+
+    
+    
+  }
+
+  .button:hover{
+    padding: 4px 10px 4px 10px;
+    background-color: rgb(255, 255, 255);
+    text-align: right;
+    color: #462050;
+    text-decoration: none;
+
+  }
+  
+
+  .button1{
+    padding: 4px 10px 4px 10px;
+    background-color: rgb(69, 23, 75);
+    margin-top: 4%;
+    font-size: 30px;
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 10px 0 0 10px;
+    text-align: right;
+    margin-right: -50px;
+    font-weight: bold;
+
+    
+  }
+
+  .button1:hover{
+    padding: 4px 10px 4px 10px;
+    background-color: rgb(255, 255, 255);
+    text-align: right;
+    color: #462050;
+    text-decoration: none;
+
+  }
+
+  
+  
+ 
+  @media (max-width: 992px) {
+    .texto-servicios {
+      padding: auto;
+      width: 100%;
+      height: 40%;
+      background-color: rgba(92, 24, 75, 0.781);
+    }
+
+    .texto-encabezado {
+      visibility: hidden;
+      position: absolute;
+      width: 100%;
+      height: 50%;
+      text-align: center;
+      margin-left: -35%;
+      margin-right:0;
+      
+      margin-top: -20%;
+    }
+    .texto-encabezado h1 {
+      left: 0;
+      font-size: 30px;
+      margin-left: 5%;
+    }
+    .texto-encabezado p{
+      left: 0;
+      margin-left: 0%;
+      margin-right: 0%;
+      margin-top: 10%;
+      font-size: 15px;
+    }
+    .botones-encabezado{
+      width: 60%;
+      height: 15%;
+      margin-top: 20%;
+      left: 0;
+      position: absolute;
+    }
+    .button {
+      width: 100%;
+      height: 25%;
+      float: left;
+      border-radius: 0 25px 25px 0;
+      text-align: center;
+      font-size: 20px;
+      background-color: #fff;
+      color: #4e1743;
+    }
+    
+
+    .button1{
+      width: 100%;
+      height: 25%;
+      float: left;
+      border-radius: 0 25px 25px 0;
+      text-align: center;
+      font-size: 20px;
+      background-color: #fff;
+      color: #4e1743;
+    }
+    .contenedor-wave{
+      width: 100%;
+      height: 10%;
+      position: relative;
+      margin-top: 0%;
+      background-color: rgba(92, 24, 75, 0.781);
+    }
+
+    .wave{
+      position: absolute;
+      width: 100%;
+      margin-top: 0%;
+
+    }
+    
+  }
+
+
+
+  /*Whatsapp*/
+.container-button{
+    background-color: #2e6329;
+    border: 1px solid #fff;
+    position: fixed;
+    z-index: 999;
+    border-radius: 50%;
+    bottom: 20px;
+    right: 25px;
+    padding: 25px;
+    transition: ease 0.3s;
+    animation: efecto 3s infinite;
+  }
+  
+  .container-button:hover{
+    transform: scale(1.1);
+    transition: 0.3s;
+  }
+  
+  .boton-wsp{
+    width: 50px;
+    transition: ease 1s;
+  }
+  
+  @keyframes efecto {
+    0%{
+      box-shadow: 0 0 0 0 rgba(0,0,0,0.85);
+    }
+    100%{
+      box-shadow: 0 0 0 25px rgba(0,0,0,0);
+    }
+  }
+
+  .contacto{
+    position: relative;
+    width: 100%;
+    height: 120%;
+    margin-top: 6%;
+    background-color: #f8f7f3;
+  }
+
+  .contacto h2{
+    visibility: hidden;
+  }
+  .contacto h3{
+    visibility: hidden;
+  }
+  .contenedor-contacto h1{
+    font-size: 20px;
+  }
+  .contenedor-contacto p{
+    font-size: 10px;
+  }
+
+  .cuadro-locacion{
+    position: absolute;
+    background: url('../img/locaciones01.png') no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 70%;
+    height: 60%;
+    margin-left: 15%;
+    margin-top: 10%;
+    border-radius: 15px 15px 100px 15px;
+  }
+  .cuadro-locacion h1{
+    margin-left: 10%;
+    margin-top: 5%;
+    font-size: 40px;
+    color: #fff;
+  }
+  .cuadro-locacion p{
+    margin-left: 10%;
+    margin-top: 1%;
+    font-size: 25px;
+    color: #fff;
+    font-weight: bold;
+  }
+
+  .locacion1{
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    width: 50%;
+    height: 35%;
+    margin-left: 45%;
+    margin-top: -40%;
+    border-radius: 10px;
+  }
+
+  .locacion1 .mapa1-celu{
+    visibility: hidden;
+  }
+  
+  .locacion2{
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    width: 50%;
+    height: 35%;
+    margin-left: 45%;
+    margin-top: -20%;
+    border-radius: 10px;
+  }
+  .locacion2 .mapa2-celu{
+    visibility: hidden;
+  }
+
+  
+
+  @media (max-width: 992px) {
+    .contacto{
+      margin-top: 0;
+      position: relative;
+      width: 100%;
+    }
+    .contacto h2{
+      visibility: visible;
+      font-size: 40px;
+      text-align: center;
+      color: #4e1743;
+      font-weight: bold;
+    }
+    .contacto h3{
+      visibility: visible;
+      margin-left: 2%;
+      margin-right: 2%;
+      margin-top: 2%;
+      text-align: justify;
+      font-weight: bold;
+    }
+    .cuadro-locacion{
+      position: absolute;
+      width: 90%;
+      height: 70%;
+      margin-left: 5%;
+    }
+    .cuadro-locacion h1{
+      margin-left: 25%;
+    }
+    .cuadro-locacion p{
+      text-align:center;
+      margin-left: -2%;
+      margin-top: 10%;
+    }
+    .locacion1 {
+      position: absolute;
+      width: 90%;
+      height: 10%;
+      margin-left: 5%;
+      margin-top: 10%;
+    }
+    .locacion1 .mapa1-celu{
+      position: absolute;
+      visibility: visible;
+      margin-top: 0%;
+      margin-left: -1%;
+      width: 100%;
+    }
+    .locacion1 .mapa1-web{
+      visibility: hidden;
+      width: 1%;
+    }
+    .locacion2{
+      position: absolute;
+      width: 90%;
+      height: 10%;
+      margin-left: 5%;
+      margin-top: 50%;
+    }
+    .locacion2 .mapa2-celu{
+      position: absolute;
+      visibility: visible;
+      margin-top: 0%;
+      margin-left: -1%;
+      width: 100%;
+    }
+    .locacion2 .mapa2-web{
+      visibility: hidden;
+      width: 1%;
+    }
+
+  }
+  .fotos-colchagua{
+    position: relative;
+    padding: auto;
+    margin-top: 0%;
+    height: 80%;
+    width: 100%; 
+    background:#f8f7f3;
+  }
+
+  .imagen-fondo{
+    position: absolute;
+    margin-top: 15%;
+    width: 100%;
+    height: 40%;
+  }
+
+  .imagen-fondo img{
+    position: absolute;
+    width: 100%;
+    height: 80%;
+  }
+  
+  .foto1{
+    position: absolute;
+    width: 30%;
+    height: 60%;
+    margin-top: 5%;
+    margin-left: 20%;
+  }
+  .foto1 img{
+    position: absolute;
+    width: 80%;
+    height: 400px;
+    border-radius: 50px;
+  }
+  .foto2 {
+    position: absolute;
+    width: 40%;
+    height: 60%;
+    margin-top: 5%;
+    right: 0;
+    margin-right: 10%;
+  }
+
+  .foto2 img{
+    position: absolute;
+    width: 410px;
+    height: 400px;
+    border-radius: 50px;
+  }
+
+  @media (max-width: 992px){
+    .fotos-colchagua{
+      position: relative;
+      width: 100%;
+      height: 60%;
+    }
+    .imagen-fondo{
+      position: absolute;
+      width: 100%;
+      margin-top: 50%;
+    }
+    .imagen-fondo img{
+      width: 100%;
+      height: 30%;
+    }
+    .foto1{
+      position: absolute;
+      width: 30%;
+      height: 20%;
+      margin-left: 5%;
+      margin-top: 30%;
+    }
+    .foto1 img{
+      position: absolute;
+      width: 180px;
+      height: 250px;
+    }
+    .foto2{
+      position: absolute;
+      float: right;
+      width: 30%;
+      height: 20%;
+      margin-top: 30%;
+      margin-right: 16%;
+    }
+    .foto2 img{
+      position: absolute;
+      width: 180px;
+      height: 250px;
+    }
+  }
+  
+
+  
+
+  .contenedor-sponsor{
+    padding: auto;
+    margin-top: 0%;
+    width: 100%;
+    height: 100%;
+    background: #f8f7f3;
+  }
+  
+  .sponsor{
+    padding: auto;
+    width: 90%;
+    margin-left: 5%;
+    height: 100%;
+   
+  }
+  
+  .sponsor h1{
+    text-align: center;
+    color: #3d1a34; 
+    font-size: 3.2em;
+    
+  }
+  
+  .sponsor-images{
+    display: flex;
+    width: 100%;
+    height: 15%;
+    background-color: #f8f7f3;
+    border-radius: 10%;
+  }
+  
+  .image-sponsor{
+    position: relative;
+    margin-top: 2%;
+    flex: 0 0 23%;
+    margin-right: 2%;
+    display: flex;
+    text-align: center;
+    background-color: #ffffff;
+    border-radius: 10px;
+    border-width: 0.5px 3px 3px 0.5px;
+    border-style: solid;
+  }
+  
+  .mi-image-sponsor{
+    border-color: rgba(0, 0, 0, 0.144)
+  }
+  
+  
+  .sponsor-images img{
+    width: 40%;
+    top: 0;
+    position: relative;
+    text-align: center;
+    border-radius: 5%;
+    margin-left: 30%;
+  
+  }
+  
+  
+  
+  .sponsor-images2{
+    display: flex;
+    width: 100%;
+    height: 15%;
+    background-color: #f8f7f3;
+    border-radius: 10%;
+  }
+  
+  .image-sponsor2{
+    position: relative;
+    margin-top: 2%;
+    flex: 0 0 23%;
+    margin-right: 2%;
+    display: flex;
+    text-align: center;
+    background-color: #ffffff;
+    border-radius: 10px;
+    border-width: 0.5px 3px 3px 0.5px;
+    border-style: solid;
+  }
+  
+  .mi-image-sponsor2{
+    border-color: rgba(0, 0, 0, 0.144)
+  }
+  
+  .sponsor-images2 .sodimac{
+    width: 40%;
+    margin-left: 30%;
+  }
+  .sponsor-images2 .alvi{
+    width: 40%;
+    margin-left: 30%;
+  }
+
+  .sponsor-images2 .bci{
+    width: 80%;
+    height: 80%;
+    margin-top: 2%;
+    margin-left: 10%;
+  }
+  .sponsor-images2 .walmart{
+    width: 80%;
+    height: 80%;
+    margin-top: 2%;
+    margin-left: 10%;
+  }
+
+  
+  .sponsor-images2 img{
+    width: 70%;
+    top: 0;
+    position: relative;
+    text-align: center;
+    border-radius: 5%;
+    margin-left: 15%;
+  }
+  
+  
+  .sponsor-images3{
+    display: flex;
+    width: 100%;
+    height: 15%;
+    background-color: #f8f7f3;
+    border-radius: 10%;
+  }
+  
+  .image-sponsor3{
+    position: relative;
+    margin-top: 2%;
+    flex: 0 0 23%;
+    margin-right: 2%;
+    display: flex;
+    text-align: center;
+    background-color: #ffffff;
+    border-radius: 10px;
+    border-width: 0.5px 3px 3px 0.5px;
+    border-style: solid;
+  }
+  
+  .mi-image-sponsor3{
+    border-color: rgba(0, 0, 0, 0.144)
+  }
+
+  .sponsor-images3 .ikea{
+    width: 80%;
+    height: 80%;
+    margin-top: 2.5%;
+    margin-left: 10%;
+  }
+  .sponsor-images3 .downlight{
+    width: 80%;
+    height: 80%;
+    margin-top: 2.5%;
+    margin-left: 10%;
+  }
+  .sponsor-images3 .dps{
+    width: 40%;
+    height: 90%;
+    margin-left: 30%;
+  }
+  
+  .sponsor-images3 img{
+    width: 100%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    position: relative;
+    align-items: center;
+    border-radius: 5%;
+  
+  }
+  
+  .sponsor-images4{
+    display: flex;
+    width: 100%;
+    height: 15%;
+    background-color: #f8f7f3;
+    border-radius: 10%;
+  }
+  
+  .image-sponsor4{
+    position: relative;
+    margin-top: 2%;
+    flex: 0 0 23%;
+    margin-right: 2%;
+    display: flex;
+    text-align: center;
+    background-color: #ffffff;
+    border-radius: 10px;
+    border-width: 0.5px 3px 3px 0.5px;
+    border-style: solid;
+  }
+  
+  .mi-image-sponsor4{
+    border-color: rgba(0, 0, 0, 0.144)
+  }
+  .sponsor-images4 .undurraga{
+    width: 80%;
+    height: 80%;
+    margin-top: 2.5%;
+    margin-left: 10%;
+  }
+  .sponsor-images4 .iron-mountain{
+    width: 80%;
+    height: 80%;
+    margin-top: 2.5%;
+    margin-left: 10%;
+  }
+  .sponsor-images4 .espacio-riesco{
+    width: 80%;
+    height: 80%;
+    margin-top: 2.5%;
+    margin-left: 10%;
+  }
+  .sponsor-images4 .xiaomi{
+    width: 40%;
+    height: 95%;
+    margin-left: 30%;
+  }
+  
+  .sponsor-images4 img{
+    width: 100%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    position: relative;
+    align-items: center;
+    border-radius: 5%;
+  }
+
+   
+.contenedor-marcas{
+  visibility: hidden;
+}
+.wrapper{
+  max-height: 120px;
+  border: 1px solid #ddd;
+  display: flex;
+  overflow-x: auto;
+}
+.wrapper2{
+  max-height: 120px;
+  border: 1px solid #ddd;
+  display: flex;
+  overflow-x: auto;
+}
+
+.wrapper .item{
+  min-width: 110px;
+  height: 110px;
+  line-height: 110px;
+  margin-left: 5%;
+  text-align: center;
+  
+}
+
+.wrapper .item2{
+  min-width: 110px;
+  height: 110px;
+  line-height: 110px;
+  margin-left: 10%;
+  text-align: center;
+  
+}
+
+.item .xiaomi{
+  width: 80%;
+  margin-top: 10%;
+}
+.item .alvi{
+  width: 80%;
+  margin-top: 10%;
+}
+.item .paris{
+  width: 85%;
+  margin-top: 10%;
+}
+.item .paris{
+  width: 85%;
+  margin-top: 10%;
+}
+.item .jumbo{
+  width: 85%;
+  margin-top: 10%;
+}
+.item .easy{
+  width: 85%;
+  margin-top: 10%;
+}
+.item .santa-isabel{
+  width: 85%;
+  margin-top: 10%;
+}
+.item .paris{
+  width: 85%;
+  margin-top: 10%;
+}
+.item .dps{
+  width: 80%;
+  margin-top: 10%;
+}
+.item .sodimac{
+  width: 85%;
+  margin-top: 10%;
+}
+.item2 .walmart{
+  width: 120%;
+  z-index: 999;
+}
+.item2 .bci{
+  width: 120%;
+  z-index: 999;
+}
+.wrapper .starken{
+  width: 120%;
+  z-index: 999;
+}
+.item2 .ikea{
+  width: 120%;
+  z-index: 999;
+}
+.item2 .undurraga{
+  width: 120%;
+  z-index: 999;
+}
+.item2 .iron-mountain{
+  width: 120%;
+  z-index: 999;
+}
+.item2 .downlight{
+  width: 140%;
+  z-index: 999;
+}
+.item2 .espacio-riesco{
+  width: 140%;
+  z-index: 999;
+}
+
+@media (max-width: 992px) {
+  .contenedor-sponsor{
+    width: 100%;
+    position: relative;
+    visibility: hidden;
+  }
+  .contenedor-marcas{
+    visibility: visible;
+    background-color: #f8f7f3;
+    margin-top: -218%;
+    height: 70%;
+  }
+  .contenedor-marcas h1{
+    text-align: center;
+    font-size: 45px;
+    margin-top: -100%;
+    color: #4e1743;
+  }
+  .wrapper{
+    margin-top: 20%;
+  }
+  .wrapper2{
+    margin-top: 20%;
+  }
+  .wrapper2 .walmart{
+    width: 120%;
+  }
+
+ 
+  
+}
+  
+
+  .footer{
+    width: 100%;
+    height: 40%;
+    position: relative;
+    background-color: #4e1743;
+  }
+  .logo-footer{
+    position: absolute;
+    width: 20%;
+    height: 100%;
+    background-color:#4e1743;
+  }
+  .logo-footer img{
+    width: 70%;
+    margin-left: 20%;
+    margin-top: 5%;
+  }
+  .contenedor-informacion{
+    position: absolute;
+    width: 20%;
+    height: 100%;
+    background-color: #4e1743;
+    margin-left: 20%;
+  }
+  .contenedor-informacion h1{
+    text-align: center;
+    color: #fff;
+    font-size: 1.4em;
+    margin-top: 10%;
+  }
+  .contenedor-informacion p{
+    text-align: center;
+    margin: 5%;
+    color: #fff;
+    font-size: 0.8em;
+  }
+  .contenedor-atencion{
+    width: 20%;
+    height: 100%;
+    position: absolute;
+    background-color: #4e1743;
+    margin-left: 40%;
+  }
+
+  .contenedor-atencion h1{
+    text-align: center;
+    color: #fff;
+    font-size: 1.4em;
+    margin-top: 10%;
+  }
+  .contenedor-atencion p{
+    text-align: center;
+    margin: 5%;
+    color: #fff;
+    font-size: 0.8em;
+  }
+
+  .contenedor-contacto{
+    width: 20%;
+    height: 100%;
+    position: absolute;
+    background-color: #4e1743;
+    margin-left: 60%;
+  }
+
+  .contenedor-contacto h1{
+    text-align: center;
+    color: #fff;
+    font-size: 1.4em;
+    margin-top: 10%;
+  }
+  .contenedor-contacto p{
+    text-align: center;
+    margin: 5%;
+    color: #fff;
+    font-size: 0.8em;
+  }
+
+  .contenedor-rrss{
+    width: 20%;
+    height: 100%;
+    position: absolute;
+    background-color: #4e1743;
+    margin-left: 80%;
+    display: flex;
+    
+    text-align: center;
+  }
+  .contenedor-rrss img{
+    width: 15%;
+    height: 15%;
+    margin-right: 10%;
+    margin-top: 8%;
+  }
+
+  .contenedor-wave2{
+    width: 100%;
+    height: 10%;
+    position: relative;
+    margin-top: -20%;
+    background-color: #4e1743;
+  }
+
+  .wave2{
+    position: absolute;
+    width: 100%;
+    margin-top: 0%;
+    transform: scaleY(-1);
+    z-index: 99;
+
+  }
+  .wave2 {
+    color: #09f;
+    animation: wave 3s ease-in-out infinite;
+    margin-bottom: -1%;
+  }
+
+
+
+  .footer{
+    width: 100%;
+    height: 40%;
+    position: relative;
+    background-color: #4e1743;
+  }
+  .logo-footer{
+    position: absolute;
+    width: 20%;
+    height: 100%;
+    background-color:#4e1743;
+  }
+  .logo-footer img{
+    width: 70%;
+    margin-left: 20%;
+    margin-top: 5%;
+  }
+  .contenedor-informacion{
+    position: absolute;
+    width: 20%;
+    height: 100%;
+    background-color: #4e1743;
+    margin-left: 20%;
+  }
+  .contenedor-informacion h1{
+    text-align: center;
+    color: #fff;
+    font-size: 1.4em;
+    margin-top: 10%;
+  }
+  .contenedor-informacion p{
+    text-align: center;
+    margin: 5%;
+    color: #fff;
+    font-size: 0.8em;
+  }
+  .contenedor-atencion{
+    width: 20%;
+    height: 100%;
+    position: absolute;
+    background-color: #4e1743;
+    margin-left: 40%;
+  }
+  
+  .contenedor-atencion h1{
+    text-align: center;
+    color: #fff;
+    font-size: 1.4em;
+    margin-top: 10%;
+  }
+  .contenedor-atencion p{
+    text-align: center;
+    margin: 5%;
+    color: #fff;
+    font-size: 0.8em;
+  }
+  
+  .contenedor-contacto{
+    width: 20%;
+    height: 100%;
+    position: absolute;
+    background-color: #4e1743;
+    margin-left: 60%;
+  }
+  
+  .contenedor-contacto h1{
+    text-align: center;
+    color: #fff;
+    font-size: 1.4em;
+    margin-top: 10%;
+  }
+  .contenedor-contacto p{
+    text-align: center;
+    margin: 5%;
+    color: #fff;
+    font-size: 0.8em;
+  }
+  
+  .contenedor-rrss{
+    width: 18%;
+    height: 100%;
+    position: absolute;
+    background-color: #4e1743;
+    margin-left: 82%;
+    display: flex;
+    text-align: center;
+  }
+  .contenedor-rrss .face{
+    
+    position: absolute;
+    width: 33%;
+    height: 50%;
+    left: 0;
+    margin-left: -15%;
+    margin-top: 10%;
+  }
+  .ig{
+  
+    position: absolute;
+    width: 33%;
+    height: 50%;
+    left: 0;
+    margin-left: 10%;
+    margin-top: 10%;
+  }
+  .contenedor-rrss .linkedin{
+   
+    position: absolute;
+    width: 33%;
+    height: 50%;
+    left: 0;
+    margin-left: 35%;
+    margin-top: 10%;
+  }
+  .contenedor-rrss img{
+    width: 50%;
+    margin-right: 5%;
+    margin-top: 8%;
+  }
+  
+  
+
+  @media (max-width: 992px) {
+    .footer{
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+    .logo-footer{
+      position: absolute;
+      width: 30%;
+      height: 100%;
+    }
+    .logo-footer img{
+      width: 80%;
+    }
+    .contenedor-informacion{
+      margin-top: 25%;
+      position: absolute;
+      float: left;
+      width: 40%;
+      height: 25%;
+      margin-left: 0;
+      
+    }
+    .contenedor-informacion h1{
+      color: white;
+    }
+    .contenedor-atencion{
+      margin-top: 25%;
+      position: absolute;
+      float: left;
+      width: 40%;
+      height: 25%;
+      margin-left: 55%;
+      
+    }
+    .contenedor-atencion h1{
+      color: white;
+    }
+    .contenedor-contacto{
+      margin-top: 76%;
+      position: absolute;
+      float: left;
+      width: 40%;
+      height: 20%;
+      margin-left: 0;
+      
+    }
+    .contenedor-contacto h1{
+      color: white;
+    }
+  
+    .contenedor-contacto p{
+      margin-top: 5%;
+    }
+  
+    .contenedor-rrss{
+      margin-top: 5%;
+      position: absolute;
+      float: left;
+      width: 40%;
+      height: 10%;
+      margin-left: 58%;
+      display: flex;
+      justify-content: center;
+    }
+    .contenedor-rrss img{
+      width: 50%;
+      height: 50%;
+    }
+    }
