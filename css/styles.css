@@ -1849,6 +1849,14 @@ body {
   text-align: center;
   z-index: 99;
 }
+
+
+.owl-carousel .owl-item img {
+    display: block;
+    width: 70%;
+    margin-left: 15%;
+  }
+
 .slider-card {
   background: #cfcfcf;
   width: 85%;
