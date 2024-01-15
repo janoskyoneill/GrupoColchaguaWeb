@@ -1302,16 +1302,15 @@ body {
     
     position: absolute;
     width: 33%;
-    height: 50%;
     left: 0;
     margin-left: -15%;
     margin-top: 10%;
   }
-  .ig{
+  .contenedor-rrss .ig{
   
     position: absolute;
     width: 33%;
-    height: 50%;
+    
     left: 0;
     margin-left: 10%;
     margin-top: 10%;
@@ -1320,7 +1319,7 @@ body {
    
     position: absolute;
     width: 33%;
-    height: 50%;
+    
     left: 0;
     margin-left: 35%;
     margin-top: 10%;
@@ -1330,8 +1329,6 @@ body {
     margin-right: 5%;
     margin-top: 8%;
   }
-  
-  
 
   @media (max-width: 992px) {
     .footer{

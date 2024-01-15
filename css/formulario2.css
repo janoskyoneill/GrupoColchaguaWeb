@@ -10,7 +10,6 @@
 
 body {
   width: 100%;
-  max-width: 1350px;
   height: 600px;
   min-height: 100vh;
   background: url('../img/cabecera.jpg') no-repeat;
@@ -267,7 +266,7 @@ body {
   /*Formulario*/
 
 .contenedor-form{
-    position: absolute;
+   
     padding: auto;
     margin-top: 200px;
     height: 100%;
