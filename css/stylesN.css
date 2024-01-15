@@ -718,6 +718,103 @@ body {
     margin-left: 0%;
   }
 
+  @media (max-width: 1920px){
+    .imagen-principal{
+      width: 100%;
+      margin-top: -8%;
+      background: transparent;
+      margin-left: 00%;
+    }
+    .img-piernas{
+      width: 35%;
+    }
+    .img-piernas h1{
+      font-size: 50px;
+    }
+    .img-piernas h2{
+      margin-right: 50%;
+      margin-top: 32%;
+      font-size: 25px;
+    }
+    .img-piernas img{
+      position: absolute;
+      width: 70%;
+      margin-top: -5%;
+      margin-right: 15%;
+    }
+    .img-uvas{
+      width: 60%;
+    }
+    .img-uvas h2{
+      margin-top: 20%;
+      font-size: 25px;
+    }
+    .img-uvas p{
+      font-size: 14px;
+      margin-top: 25%;
+    }
+
+  .img-edificio{
+    width: 60%;
+  }
+  .img-edificio img{
+    margin-top: 10%;
+    width: 50%;
+    height: 140%;
+  }
+  .img-edificio h2{
+    margin-top: 28%;
+    font-size: 25px;
+    margin-left: 15%;
+  }
+  .img-edificio p{
+    margin-top: 32%;
+    font-size: 15px;
+    margin-left: 15%;
+    margin-right: 47%;
+  }
+  .img-familia{
+    width: 60%;
+  }
+  .img-familia h2{
+    font-size: 25px;
+  }
+  .img-familia p{
+    margin-top: 23%;
+    font-size: 15px;
+  }
+  .img-manos{
+    width: 54%;
+  }
+  .img-manos img{
+    width: 50%;
+    margin-right: 8%;
+    margin-top: 10%;
+  }
+  .img-manos h2{
+    font-size: 25px;
+  }
+  .img-manos p{
+    font-size: 15px;
+    margin-top: 38%;
+  }
+  .img-izquierda{
+    width: 100%;
+  }
+  .img-izquierda img{
+    margin-top: -10%;
+    width: 55%;
+  }
+  .img-izquierda h2{
+    margin-top: 5%;
+    font-size: 25px;
+  }
+  .img-izquierda p{
+    margin-top: 8%;
+    font-size: 15px;
+  }
+  }
+
   @media (max-width: 992px) {
     .imagen-principal{
       visibility: hidden;

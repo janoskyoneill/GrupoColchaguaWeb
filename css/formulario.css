@@ -547,6 +547,25 @@ body {
     margin-right: 10%;
     margin-top: 8%;
   }
+  @media (max-width: 1920px) {
+    .contenedor-form{
+      width: 100%;
+    }
+    .formulario{
+      width: 70%;
+    }
+    .text-form{
+      margin-top: -50%;
+    }
+    .enviar{
+      margin-top: 20%;
+    }
+    .adjuntar-arch{
+      margin-top: 170%;
+    }
+    }
+
+
   
   @media (max-width: 992px) {
     .nuestra-promesa{
