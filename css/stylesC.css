@@ -310,9 +310,12 @@ body {
   }
 
   .botones-encabezado{
-    margin-top: -260px;
-    text-align: right;
-    margin-right: -100px;
+    margin-top: -5%;
+    margin-right: 45px; 
+    height: 20%;
+    position: absolute ;
+    right: 0;
+    background: transparent;
   }
   .button{
     padding: 4px 10px 4px 10px;
@@ -322,12 +325,8 @@ body {
     text-decoration: none;
     display: inline-block;
     border-radius: 10px 0 0 10px;
-    text-align: right;
     margin-right: -50px;
     font-weight: bold;
-
-    
-    
   }
 
   .button:hover{
@@ -336,7 +335,6 @@ body {
     text-align: right;
     color: #462050;
     text-decoration: none;
-
   }
   
 
@@ -349,9 +347,9 @@ body {
     text-decoration: none;
     display: inline-block;
     border-radius: 10px 0 0 10px;
-    text-align: right;
     margin-right: -50px;
     font-weight: bold;
+    width: 18rem;
 
     
   }
