@@ -144,20 +144,20 @@ body {
   display: none;
 }
 
-.header .logo-main {
-  position: relative;
-  top: auto;
-  width: 40%;
-  margin-left: -140px;
-}
-
 .wave {
   color: #09f;
   animation: wave 3s ease-in-out infinite;
   margin-bottom: -1%;
 }
+.header .logo-main {
+  position: relative;
+  top: auto;
+  width: 40%;
+  margin-left: -135px;
+}
 
-@media (max-width: 992px) {
+
+@media (max-width: 666px) {
   .header {
     padding: 1.3rem 15%;
   }
@@ -185,6 +185,7 @@ body {
     position: absolute;
     top: 100%;
     left: 0;
+    margin-left: 0%;
     width: 100%;
     height: 0%;
     background: #4e1743;
@@ -193,6 +194,7 @@ body {
     overflow: hidden;
     transition: .3s ease;
   }
+  
   
 
   #check:checked~.navbar {
@@ -210,6 +212,11 @@ body {
     transition: .3s ease;
   }
 
+  .navbar a::before{
+    color: #fff;
+    font-weight: bold;
+  }
+
   
   #check:checked~.navbar a {
     transform: translateY(0);
@@ -219,8 +226,34 @@ body {
 
   .header .logo-main {
     margin-left: -20px;
+    width: 70%;
+  }
+
+  .navbar .rrss{
+    position: absolute;
+    width: 100%;
+    margin-top: 15%;
+    margin-left: 7%;
     
   }
+  .navbar .logos-rrss{
+    width: 100%;
+    margin-top: -10%;
+    margin-left: 20%;
+  }
+  .logos-rrss .face{
+    width: 100%;
+    margin-left: -32%;
+  }
+  .logos-rrss .ig{
+    width: 100%;
+    margin-left: -2%;
+  }
+  .logos-rrss .linkedin{
+    width: 100%;
+    margin-left: 8%;
+  }
+
 }
 
  
@@ -255,6 +288,7 @@ body {
       );
     }
   }   
+  
 
   /*first section*/
   .contenedor-wave{
