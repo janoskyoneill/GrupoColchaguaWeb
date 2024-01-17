@@ -257,11 +257,33 @@ body {
   }   
 
   /*first section*/
+  .contenedor-wave{
+    position: absolute;
+    margin-top: -7%;
+    margin-left: 0%;
+    width: 100%;
+    height: 13%;
+    background-color: #4e1743;
+    z-index: 99;
+  }
   .wave{
     position: absolute;
+    background-color: #4e1743;
     bottom: 0;
     width: 100%;
   }
+
+  @media (max-width: 666px) {
+    .contenedor-wave{
+      width: 100%;
+      margin-top: -12%;
+      
+    }
+    .wave{
+      width: 100%;
+    }
+    }
+
 
   /*Formulario*/
 
@@ -335,7 +357,7 @@ body {
   .form-apellido{
     position: absolute;
     width: 40%;
-    margin-left: 0%;
+    margin-left: 50%;
     margin-top: 0%;
     color: #fff;
   }
@@ -388,6 +410,14 @@ body {
     margin-top: 32%;
     color: #fff;
   }
+  .btn-primary {
+    width: 20%;
+    height: 5%;
+    border-radius: 25px;
+    position: absolute;
+    margin-top: 40.5%;
+    margin-left: 68%
+  }
 
   label {
     display: block;
@@ -411,6 +441,12 @@ body {
     background-color:#4e1743;
     color: white;
     cursor: pointer;
+  }
+
+  @media (max-width: 666px){
+    .contenedor-form{
+      margin-top: 25%;
+    }
   }
 
   .footer{
@@ -493,56 +529,50 @@ body {
   }
   
   .contenedor-rrss{
-    width: 20%;
+    width: 18%;
     height: 100%;
     position: absolute;
     background-color: #4e1743;
-    margin-left: 80%;
+    margin-left: 82%;
     display: flex;
-    
     text-align: center;
   }
+  .contenedor-rrss .face{
+    
+    position: absolute;
+    width: 33%;
+    height: 50%;
+    left: 0;
+    margin-left: -15%;
+    margin-top: 10%;
+  }
+  .ig{
+  
+    position: absolute;
+    width: 33%;
+    height: 50%;
+    left: 0;
+    margin-left: 10%;
+    margin-top: 10%;
+  }
+  .contenedor-rrss .linkedin{
+   
+    position: absolute;
+    width: 33%;
+    height: 50%;
+    left: 0;
+    margin-left: 35%;
+    margin-top: 10%;
+  }
   .contenedor-rrss img{
-    width: 15%;
-    height: 15%;
-    margin-right: 10%;
+    width: 50%;
+   
+    margin-right: 5%;
     margin-top: 8%;
   }
   
-  @media (max-width: 992px) {
-    .nuestra-promesa{
-      width: 100%;
-      position: relative;
-    }
-    .nuestra-promesa h2{
-      text-align: center;
-    }
-    .nuestra-promesa p{
-      text-align: justify;
-    }
-    .compromiso-mujeres{
-      width: 100%;
-      height: 100%;
-      position: relative;
-     
-    }
-    .contenedor-compromiso{
-      width: 100%;
-      position: absolute;
-    }
-    .compromiso-mujeres h1{
-      margin-top: -35%;
-      font-size: 3em;
-    }
-    .compromiso-mujeres h2{ 
-      margin-top: -2%;
-      font-size: 0.9em;
-    }
-    .compromiso-mujeres img{
-      width: 100%;
-      height: 100%;
-      margin-top: 150%;
-    }
+  @media (max-width: 666px) {
+   
     .footer{
       position: relative;
       width: 100%;
@@ -608,8 +638,17 @@ body {
       justify-content: center;
     }
     .contenedor-rrss img{
-      width: 50%;
-      height: 50%;
+      width: 100%;
+      margin-left: 10%;
+    }
+    .contenedor-rrss .face{
+      margin-left: -25%;
+    }
+    .contenedor-rrss .ig{
+      margin-left: 15%;
+    }
+    .contenedor-rrss .linkedin{
+      margin-left: 55%;
     }
   
   }
