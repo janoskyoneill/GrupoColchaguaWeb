@@ -233,6 +233,7 @@ body {
     width: 70%;
     
   }
+  
 }
 
  
@@ -475,13 +476,14 @@ body {
   }
 
   .img-piernas{
-    position: absolute;
+    margin-left: 5%;
+    
     width: 35%;
     height: 25%;
     background: transparent;
     top: 2%;
-    right: 0;
-    margin-right: 10%;
+    
+    
     text-align: justify;
   }
 
@@ -511,7 +513,7 @@ body {
     width: 80%;
     position: absolute;
     top: 0;
-    right: 0;
+   
   }
 
 
@@ -717,8 +719,8 @@ body {
     left: 0;
     margin-left: 0%;
   }
-
-  @media (max-width: 1920px){
+ 
+  @media (min-width: 1920px){
     .imagen-principal{
       width: 100%;
       margin-top: -8%;
@@ -822,10 +824,16 @@ body {
 
     .img-piernas{
       position: relative;
-      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      width: 23rem;
       height: 20%;
       background-color:#f8f7f3;
-      margin-right: 0;
+      
+      
+      margin-bottom: 10%;
     }
     .img-piernas h1{
       font-size: 40px;
@@ -833,16 +841,26 @@ body {
     }
     .img-piernas h2{
       font-size: 20px;
-      margin-left: 5%;
+      margin-bottom: -10px;
+      padding-top: 100px;
+      text-align: center;
+      margin-right: 0%;
     }
 
     .img-piernas p{
       text-align: justify;
       margin-left: 5%;
       margin-right: 5%;
+      margin-top: 5%;
     }
     .img-piernas img{
-      width: 80%;
+      width: 300px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      
     }
     .img-uvas{
       position: relative;
