@@ -499,6 +499,7 @@ body {
     font-weight: bold;
     color: #462050;
     margin-top: 40%;
+    margin-bottom: 8%;
     margin-right: 40%;
   }
 
@@ -728,21 +729,27 @@ body {
       margin-left: 00%;
     }
     .img-piernas{
-      width: 35%;
+      position: absolute;
+      width: 30%;
+      margin-left: 60%;
     }
     .img-piernas h1{
       font-size: 50px;
     }
+
+    .img-piernas p{
+      margin-top: -6%
+    }
+
     .img-piernas h2{
       margin-right: 50%;
-      margin-top: 32%;
+      margin-top: 40%;
+      /* margin-bottom: 8%; */
       font-size: 25px;
     }
     .img-piernas img{
-      position: absolute;
-      width: 70%;
-      margin-top: -5%;
-      margin-right: 15%;
+      width: 100%;
+      margin-top: -13%;
     }
     .img-uvas{
       width: 60%;
