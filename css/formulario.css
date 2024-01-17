@@ -462,8 +462,8 @@ body {
     height: 5%;
     border-radius: 25px;
     position: absolute;
-    margin-top: -129%;
-    margin-left: 80%
+    margin-top: 43.5%;
+    margin-left: 68%
   }
 
   @media (max-width: 666px) {
@@ -478,6 +478,7 @@ body {
     .formulario{
       width: 70%;
       margin-top: 0%;
+      border-radius: 100px;
     }
     .text-form{
       margin-top: -80%;
@@ -513,7 +514,8 @@ body {
       margin-top: 170%;
     }
     .btn-primary{
-      margin-top: -152%;
+      margin-top: 27%;
+      margin-left: 65%;
       
     }
     }
