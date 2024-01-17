@@ -17,6 +17,18 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" >
 </head>
 
+<script src="form2.js"></script>
+
+<script
+type="text/javascript"
+src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+></script>
+<script type="text/javascript">
+(function () {
+  emailjs.init("LsgSQHxwnVOcAAmSD");
+})();
+</script>
+
 <body>
     <header class="header">
         <img src="img/Logo horizontal.png" alt="" class="logo-main">
@@ -73,8 +85,7 @@
     <div class="formulario">
         <img src="img/griscompleto.png" alt="">
         <div class="text-form">
-            <form action="#" method="post" enctype="multipart/form-data">
-
+            <div action="#" method="post" enctype="multipart/form-data" >
                 <div class="form-nombre">
                 <label for="nombre">Nombre:</label>
                 <input type="text" id="nombre" name="nombre" required>
@@ -91,8 +102,8 @@
             </div>
             
                 <div class="form-nombre-empresa">
-                    <label for="nombre-empresa">Nombre empresa:</label>
-                    <input type="text" id="nombre-empresa" name="nombre-empresa" required>
+                    <label for="empresa">Nombre empresa:</label>
+                    <input type="text" id="empresa" name="nombre-empresa" required>
                 </div>
 
                 <div class="form-direccion">
@@ -118,8 +129,8 @@
                         
                 
             
-                <input type="submit" value="Enviar">
-              </form>
+            <button style="margin-top: 100rem;" class="btn btn-primary" onclick="sendMail()">Enviar</button>
+        </form>
         
     </div>
     </div>
