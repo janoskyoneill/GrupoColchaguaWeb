@@ -116,6 +116,7 @@ body {
   color: #ffffff;
 }
 
+
 .navbar .rrss{
   width: 10%;
   display: flex;
@@ -129,9 +130,27 @@ body {
   display: flex;
   margin-right: 135px;
 }
-.rrss img{
+.logos-rrss .face{
+  position: absolute;
+  width: 10%;
+  margin-left: -10%;
+  margin-top: -1.5%;
+}
+.logos-rrss .ig{
+  position: absolute;
+  width: 10%;
+  margin-left: 73%;
+  margin-top: -1.5%;
+}
+.logos-rrss .linkedin{
+  margin-top: -1.5%;
+  position: absolute;
+  width: 10%;
+  margin-left: 10%;
+}
+.navbar img{
   margin-top: -30px;
-  margin-bottom: 15px;
+  margin-bottom: 5px;
   width: 40px;
   text-align: center;
   margin-left: 25px;
@@ -232,7 +251,32 @@ body {
     margin-left: -20px;
     width: 70%;
   }
-  
+
+  .navbar .rrss{
+    position: absolute;
+    width: 100%;
+    margin-top: 15%;
+    margin-left: 7%;
+    
+  }
+  .navbar .logos-rrss{
+    width: 100%;
+    margin-top: -10%;
+    margin-left: 20%;
+  }
+  .logos-rrss .face{
+    width: 100%;
+    margin-left: -32%;
+  }
+  .logos-rrss .ig{
+    width: 100%;
+    margin-left: -2%;
+  }
+  .logos-rrss .linkedin{
+    width: 100%;
+    margin-left: 8%;
+  }
+
 }
 
  
