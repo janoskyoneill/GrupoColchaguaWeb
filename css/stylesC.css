@@ -217,6 +217,7 @@ body {
     margin-left: 0;
     width: 100%;
     height: 0%;
+    margin-left: -2%;
     background: #4e1743;
     backdrop-filter: blur(10px);
     box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
@@ -623,6 +624,7 @@ body {
       position: absolute;
       width: 90%;
       height: 65%;
+      max-height: 800px;
       margin-left: 5%;
     }
     .cuadro-locacion h1{

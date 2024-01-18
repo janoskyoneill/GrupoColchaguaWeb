@@ -499,7 +499,43 @@ body {
 
   @media (max-width: 666px){
     .contenedor-form{
-      margin-top: 25%;
+      margin-top: 30%;
+    }
+    .contenedor-form h1{
+      margin-top: 10%;
+    }
+    .formulario{
+      width: 90%;
+      margin-left: 5%;
+      height: 70%;
+      max-height: 450px;
+    }
+    .form-nombre{
+      margin-top: 20%;
+    }
+    .form-apellido{
+      margin-top: 20%;
+    }
+    .form-correo{
+      margin-top: 40%;
+    }
+    .form-nombre-empresa{
+      margin-top: 60%;
+    }
+    .form-direccion{
+      margin-top: 60%;
+    }
+    .form-telefono{
+      margin-top: 80%;
+    }
+    .form-rut{
+      margin-top: 80%;
+    }
+    .form-ayuda{
+      margin-top: 100%;
+    }
+    .btn-primary{
+      margin-top: 132%;
     }
   }
 
