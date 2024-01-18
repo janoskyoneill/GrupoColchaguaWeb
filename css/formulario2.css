@@ -333,6 +333,7 @@ body {
     }
     .wave{
       width: 100%;
+      
     }
     }
 
@@ -468,7 +469,8 @@ body {
     border-radius: 25px;
     position: absolute;
     margin-top: 40.5%;
-    margin-left: 68%
+    margin-left: 68%;
+    cursor: pointer;
   }
 
   label {
