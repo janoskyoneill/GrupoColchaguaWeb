@@ -266,12 +266,13 @@ body {
     position: absolute;
     width: 100%;
     margin-top: 15%;
-    margin-left: 0%;
+    margin-left: 7%;
     
   }
   .navbar .logos-rrss{
     width: 100%;
-    margin-left: 10%;
+    margin-top: -10%;
+    margin-left: 20%;
   }
   .logos-rrss .face{
     width: 100%;
@@ -1796,19 +1797,20 @@ body {
 @media (max-width: 666px) {
   .contenedor-sponsor{
     width: 100%;
+    margin-top: -145%;
     position: relative;
     visibility: hidden;
   }
   .contenedor-marcas{
     visibility: visible;
     background-color: #f8f7f3;
-    margin-top: -180%;
+    margin-top: 20%;
     height: 70%;
   }
   .contenedor-marcas h1{
     text-align: center;
     font-size: 45px;
-    margin-top: -100%;
+    margin-top: 0%;
     color: #4e1743;
   }
   .wrapper{

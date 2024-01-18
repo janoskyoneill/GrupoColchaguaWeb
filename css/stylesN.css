@@ -129,9 +129,27 @@ body {
   display: flex;
   margin-right: 135px;
 }
-.rrss img{
+.logos-rrss .face{
+  position: absolute;
+  width: 10%;
+  margin-left: -10%;
+  margin-top: -1.5%;
+}
+.logos-rrss .ig{
+  position: absolute;
+  width: 10%;
+  margin-left: 73%;
+  margin-top: -1.5%;
+}
+.logos-rrss .linkedin{
+  margin-top: -1.5%;
+  position: absolute;
+  width: 10%;
+  margin-left: 10%;
+}
+.navbar img{
   margin-top: -30px;
-  margin-bottom: 15px;
+  margin-bottom: 5px;
   width: 40px;
   text-align: center;
   margin-left: 25px;
@@ -231,9 +249,33 @@ body {
   .header .logo-main {
     margin-left: -20px;
     width: 70%;
+  }
+
+  .navbar .rrss{
+    position: absolute;
+    width: 100%;
+    margin-top: 15%;
+    margin-left: 7%;
     
   }
-  
+  .navbar .logos-rrss{
+    width: 100%;
+    margin-top: -10%;
+    margin-left: 20%;
+  }
+  .logos-rrss .face{
+    width: 100%;
+    margin-left: -32%;
+  }
+  .logos-rrss .ig{
+    width: 100%;
+    margin-left: -2%;
+  }
+  .logos-rrss .linkedin{
+    width: 100%;
+    margin-left: 8%;
+  }
+
 }
 
  
@@ -363,7 +405,7 @@ body {
 
   }
 
-  @media (max-width: 992px) {
+  @media (max-width: 666px) {
     .texto-servicios {
       padding: auto;
       width: 100%;
@@ -754,6 +796,7 @@ body {
     .img-uvas{
       width: 60%;
     }
+    
     .img-uvas h2{
       margin-top: 20%;
       font-size: 25px;
@@ -824,7 +867,7 @@ body {
   }
   }
 
-  @media (max-width: 992px) {
+  @media (max-width: 666px) {
     .imagen-principal{
       visibility: hidden;
     }
@@ -835,7 +878,7 @@ body {
       justify-content: center;
       align-items: center;
       flex-direction: column;
-      width: 23rem;
+      width: 20rem;
       height: 20%;
       background-color:#f8f7f3;
       
@@ -890,8 +933,8 @@ body {
     }
     .img-uvas img{
       margin-top: -10%;
-      width: 55%;
-      height: 120%;
+      width: 63%;
+      height: 110%;
       margin-left: -5%;
     }
 
@@ -927,12 +970,12 @@ body {
     }
     .img-familia h2{
       margin-right: 5%;
-      margin-top: 0;
+      margin-top: -1%;
       font-size: 20px;
     }
     .img-familia p{
       margin-right: 5%;
-      margin-top: 15%;
+      margin-top: 17%;
     }
     .img-familia img{
       width: 50%;
@@ -947,12 +990,12 @@ body {
 
     .img-manos h2{
       font-size: 20px;
-      margin-top: 0;
+      margin-top: -1%;
       margin-left: 5%;
       margin-right: 50%;
     }
     .img-manos p{
-      margin-top: 15%;
+      margin-top: 17%;
       margin-left: 5%;
     }
     .img-manos img{
@@ -962,7 +1005,7 @@ body {
 
     .img-izquierda{
       position: relative;
-      margin-top: -100%;
+      margin-top: -120%;
       width: 100%;
       height: 20%;
       background-color:#f8f7f3;
@@ -970,15 +1013,16 @@ body {
 
     .img-izquierda h2{
       font-size: 20px;
-      margin-top: 4%;
+      margin-top: 5%;
       margin-left: 60%;
-      margin-right: 8%;
+      margin-right: 4%;
     }
     
     .img-izquierda p{
       margin-left: 60%;
-      margin-right: 5%;
-      margin-top: 15%;
+      margin-right: 4%;
+      margin-top: 18%;
+      z-index: 99;
     }
 
     .img-izquierda .text-izquierda{
@@ -987,7 +1031,7 @@ body {
       margin-top: 10%;
     }
     .img-izquierda img{
-      width: 70%;
+      width: 68%;
       height: 90%;
       margin-left: -5%;
       margin-top: -10%;
@@ -1041,6 +1085,23 @@ body {
     margin-left: 0%;
     margin-right: 0%;
   }
+
+  @media (max-width: 666px) {
+    .nuestra-promesa{
+      margin-top: 6%;
+      width: 100%;
+      height: 50%;
+      bottom: 0;
+      position: relative;
+    }
+    .nuestra-promesa h2{
+      font-size: 45px;
+    }
+    .nuestra-promesa p{
+      font-size: 15px;
+    }
+  }
+
 
   .compromiso-mujeres{
     top: 0;
@@ -1418,17 +1479,18 @@ body {
   z-index: 999;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 666px) {
   .contenedor-sponsor{
     width: 100%;
     position: relative;
     visibility: hidden;
+    margin-top: -120%;
   }
   .contenedor-marcas{
     visibility: visible;
     background-color: #f8f7f3;
-    margin-top: -218%;
-    height: 70%;
+    margin-top: -100%;
+    height: 82%;
   }
   .contenedor-marcas h1{
     text-align: center;
@@ -1502,23 +1564,25 @@ body {
     height: 2%;
     z-index: 99;
   }
-  @media (max-width: 992px) {
+  @media (max-width: 666px) {
     .cuadro{
       position: relative;
+      z-index: 0;
       width: 100%;
-      margin-top: 60%;
+      margin-top: 90%;
     }
     .cuadro img{
       width: 100%;
     }
     .cuadro h1{
-      font-size: 35px;
+      font-size: 30px;
     }
     .cuadro h2{
       font-size: 35px;
     }
     .cuadro h3{
       font-size: 10px;
+      margin-top: -22%;
     }
   }
 
@@ -1667,23 +1731,11 @@ body {
   }
 
 
-  @media (max-width: 992px) {
-    .nuestra-promesa{
-      margin-top: 5%;
-      width: 100%;
-      height: 50%;
-      bottom: 0;
-      position: relative;
-    }
-    .nuestra-promesa h2{
-      text-align: center;
-    }
-    .nuestra-promesa p{
-      text-align: justify;
-    }
+  @media (max-width: 666px) {
+    
     .compromiso-mujeres{
       width: 100%;
-      height: 20%;
+      height: 30%;
       position: relative;
      
     }
@@ -1693,16 +1745,16 @@ body {
     }
     .compromiso-mujeres h1{
       margin-top: -35%;
-      font-size: 3em;
+      font-size: 2.5em;
     }
     .compromiso-mujeres h2{ 
       margin-top: -2%;
-      font-size: 0.9em;
+      font-size: 0.8em;
     }
     .compromiso-mujeres img{
       width: 100%;
       height: 100%;
-      margin-top: 0%;
+      margin-top: 10%;
     }
     .footer{
       position: relative;
@@ -1765,8 +1817,17 @@ body {
       justify-content: center;
     }
     .contenedor-rrss img{
-      width: 50%;
-      height: 50%;
+      width: 100%;
+      margin-left: 10%;
+    }
+    .contenedor-rrss .face{
+      margin-left: -25%;
+    }
+    .contenedor-rrss .ig{
+      margin-left: 15%;
+    }
+    .contenedor-rrss .linkedin{
+      margin-left: 55%;
     }
 
   }
@@ -1795,7 +1856,7 @@ body {
 }
 
 .boton-wsp{
-  width: 50px;
+  width: 30px;
   transition: ease 1s;
 }
 

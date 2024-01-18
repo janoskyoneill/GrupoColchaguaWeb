@@ -116,6 +116,7 @@ body {
   color: #ffffff;
 }
 
+
 .navbar .rrss{
   width: 10%;
   display: flex;
@@ -129,9 +130,27 @@ body {
   display: flex;
   margin-right: 135px;
 }
-.rrss img{
+.logos-rrss .face{
+  position: absolute;
+  width: 10%;
+  margin-left: -10%;
+  margin-top: -1.5%;
+}
+.logos-rrss .ig{
+  position: absolute;
+  width: 10%;
+  margin-left: 73%;
+  margin-top: -1.5%;
+}
+.logos-rrss .linkedin{
+  margin-top: -1.5%;
+  position: absolute;
+  width: 10%;
+  margin-left: 10%;
+}
+.navbar img{
   margin-top: -30px;
-  margin-bottom: 15px;
+  margin-bottom: 5px;
   width: 40px;
   text-align: center;
   margin-left: 25px;
@@ -232,7 +251,32 @@ body {
     margin-left: -20px;
     width: 70%;
   }
-  
+
+  .navbar .rrss{
+    position: absolute;
+    width: 100%;
+    margin-top: 15%;
+    margin-left: 7%;
+    
+  }
+  .navbar .logos-rrss{
+    width: 100%;
+    margin-top: -10%;
+    margin-left: 20%;
+  }
+  .logos-rrss .face{
+    width: 100%;
+    margin-left: -32%;
+  }
+  .logos-rrss .ig{
+    width: 100%;
+    margin-left: -2%;
+  }
+  .logos-rrss .linkedin{
+    width: 100%;
+    margin-left: 8%;
+  }
+
 }
 
  
@@ -310,7 +354,7 @@ body {
   }
 
   .botones-encabezado{
-    margin-top: -5%;
+    margin-top: -8%;
     margin-right: 45px; 
     height: 20%;
     position: absolute ;
@@ -366,7 +410,7 @@ body {
   
   
  
-  @media (max-width: 992px) {
+  @media (max-width: 666px) {
     .texto-servicios {
       padding: auto;
       width: 100%;
@@ -406,7 +450,7 @@ body {
     }
     .button {
       width: 100%;
-      height: 25%;
+      height: 27%;
       float: left;
       border-radius: 0 25px 25px 0;
       text-align: center;
@@ -418,7 +462,7 @@ body {
 
     .button1{
       width: 100%;
-      height: 25%;
+      height: 27%;
       float: left;
       border-radius: 0 25px 25px 0;
       text-align: center;
@@ -465,7 +509,7 @@ body {
   }
   
   .boton-wsp{
-    width: 50px;
+    width: 30px;
     transition: ease 1s;
   }
   
@@ -482,7 +526,7 @@ body {
     position: relative;
     width: 100%;
     height: 120%;
-    margin-top: 6%;
+    margin-top: 4%;
     background-color: #f8f7f3;
   }
 
@@ -553,11 +597,12 @@ body {
 
   
 
-  @media (max-width: 992px) {
+  @media (max-width: 666px) {
     .contacto{
       margin-top: 0;
       position: relative;
       width: 100%;
+      height: 180%;
     }
     .contacto h2{
       visibility: visible;
@@ -577,7 +622,7 @@ body {
     .cuadro-locacion{
       position: absolute;
       width: 90%;
-      height: 70%;
+      height: 65%;
       margin-left: 5%;
     }
     .cuadro-locacion h1{
@@ -677,11 +722,12 @@ body {
     border-radius: 50px;
   }
 
-  @media (max-width: 992px){
+  @media (max-width: 666px){
     .fotos-colchagua{
       position: relative;
       width: 100%;
       height: 60%;
+      margin-top: 0%;
     }
     .imagen-fondo{
       position: absolute;
@@ -701,7 +747,7 @@ body {
     }
     .foto1 img{
       position: absolute;
-      width: 180px;
+      width: 160px;
       height: 250px;
     }
     .foto2{
@@ -710,11 +756,11 @@ body {
       width: 30%;
       height: 20%;
       margin-top: 30%;
-      margin-right: 16%;
+      margin-right: 18%;
     }
     .foto2 img{
       position: absolute;
-      width: 180px;
+      width: 160px;
       height: 250px;
     }
   }
@@ -1068,8 +1114,8 @@ body {
   .contenedor-marcas{
     visibility: visible;
     background-color: #f8f7f3;
-    margin-top: -218%;
-    height: 70%;
+    margin-top: -180%;
+    height: 80%;
   }
   .contenedor-marcas h1{
     text-align: center;
@@ -1396,7 +1442,16 @@ body {
       justify-content: center;
     }
     .contenedor-rrss img{
-      width: 50%;
-      height: 50%;
+      width: 100%;
+      margin-left: 10%;
+    }
+    .contenedor-rrss .face{
+      margin-left: -25%;
+    }
+    .contenedor-rrss .ig{
+      margin-left: 15%;
+    }
+    .contenedor-rrss .linkedin{
+      margin-left: 55%;
     }
     }
