@@ -101,11 +101,21 @@ body {
   font-weight: 700;
 }
 
+.navbar{
+  position: relative;
+  margin-top:0.5%;
+  margin-left: 5%;
+  width: 100%;
+}
+
+
+
 .navbar a{
   font-size: 1.40rem;
   margin-left: 2%;
   margin-bottom: -25%;
   color: #e6e6e6;
+  margin-top: -9%;
   text-decoration: none;
   font-weight: 500;
   font-family: 'Lato', sans-serif,;
@@ -115,7 +125,6 @@ body {
   font-weight: bold;
   color: #ffffff;
 }
-
 
 .navbar .rrss{
   width: 10%;
@@ -179,6 +188,7 @@ body {
   width: 40%;
   margin-left: -135px;
 }
+
 
 .wave {
   color: #09f;
