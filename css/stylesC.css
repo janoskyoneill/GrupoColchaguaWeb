@@ -324,7 +324,7 @@ body {
   }   
 
   .contenedor-wave{
-    margin-top: 4%;
+    margin-top: 0%;
     position: relative;
     width: 100%;
     height: 10%;
@@ -362,6 +362,8 @@ body {
     padding: 100px;
     height: 100px;
     width: 100%;
+    margin-top: 8%;
+    margin-left: 5%;
     height: auto;   
   }
 
@@ -386,8 +388,8 @@ body {
   }
 
   .botones-encabezado{
-    margin-top: -8%;
-    margin-right: 45px; 
+    margin-top: -14%;
+    margin-right: 50px; 
     height: 20%;
     position: absolute ;
     right: 0;
